@@ -11,7 +11,7 @@
     <properties>
         <java.version>1.8</java.version>
         <vertx.verticle>org.knative.examples.cloudevents.vertx.CloudEventSampleVerticle</vertx.verticle>
-        <cloudevents.version>2.0.0-milestone2</cloudevents.version>
+        <cloudevents.version>2.0.0</cloudevents.version>
     </properties>
 
     <dependencies>
