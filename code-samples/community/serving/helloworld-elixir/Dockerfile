@@ -20,7 +20,7 @@ RUN mix release --env=prod --verbose \
     && mv _build/prod/rel/${APP_NAME} /opt/release \
     && mv /opt/release/bin/${APP_NAME} /opt/release/bin/start_server
 
-FROM alpine:latest
+FROM alpine:3.18.3
 RUN apk update && apk --no-cache --update add bash openssl-dev ca-certificates
 
 RUN addgroup -g 1000 appuser && \
