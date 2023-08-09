@@ -12,7 +12,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -v -o hellosecrets
 
 # Use a Docker multi-stage build to create a lean production image.
 # https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds
-FROM alpine
+FROM alpine:3.18.3
 
 # Enable the use of outbound https
 RUN apk add --no-cache ca-certificates
