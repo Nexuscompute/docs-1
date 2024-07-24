@@ -27,7 +27,7 @@ RUN go get gopkg.in/go-playground/webhooks.v3/github
 # build the sample
 RUN CGO_ENABLED=0 go build -o /go/bin/webhook-sample .
 
-FROM golang:alpine
+FROM golang:1.23rc2-alpine3.20
 
 EXPOSE 8080
 COPY --from=builder /go/bin/webhook-sample /app/webhook-sample
